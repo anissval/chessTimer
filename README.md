@@ -1,2 +1,2 @@
 # chessTimer
-building a chess timer to practice KOTLIN 
+building a chess timer android application to practice KOTLIN 
