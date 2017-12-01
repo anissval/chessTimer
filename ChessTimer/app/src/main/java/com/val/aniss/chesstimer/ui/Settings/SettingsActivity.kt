@@ -21,7 +21,6 @@ class SettingsActivity : AppCompatActivity(), SettingsContract.View {
         configure_game_buttton.setOnClickListener {
 
             //obtiene y pasa tiempo configurado (nombre tmb?)
-
             var time: Long = 5
 
             settingsPresenter!!.instantiateGame(time,"Jugador 1", "Jugador 2")
@@ -29,14 +28,7 @@ class SettingsActivity : AppCompatActivity(), SettingsContract.View {
             var i : Intent = Intent(this, DashBoardActivity::class.java)
             startActivity(i)
             finish()
-
         }
-
     }
-
-    override fun setPresenter(presenter: SettingsActivity) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
 
 }

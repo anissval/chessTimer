@@ -8,14 +8,12 @@ import com.`val`.aniss.chesstimer.util.BaseView
  */
 interface SettingsContract {
 
-    interface View : BaseView<SettingsActivity> {
+    interface View : BaseView{
 
     }
 
     interface Presenter : BasePresenter<SettingsActivity> {
-
         fun instantiateGame (time : Long, name1 : String , name2 : String)
-
     }
 
     }

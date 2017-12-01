@@ -13,7 +13,7 @@ public object Match {
 
     fun instantiate(time : Long) {
         chessTimer_player1  = ChessTimer(time)
-        chessTimer_player2 = ChessTimer(time)
+        chessTimer_player2= ChessTimer(time)
         player1 = Player("Jugador1", chessTimer_player1)
         player2 = Player("Jugador2", chessTimer_player2)
     }

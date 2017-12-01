@@ -1,6 +1,8 @@
 package com.`val`.aniss.chesstimer.ui
 
+import android.widget.Chronometer
 import com.`val`.aniss.chesstimer.DashBoardActivity
+import com.`val`.aniss.chesstimer.model.Player
 import com.`val`.aniss.chesstimer.util.BasePresenter
 import com.`val`.aniss.chesstimer.util.BaseView
 
@@ -9,23 +11,22 @@ import com.`val`.aniss.chesstimer.util.BaseView
  */
 interface DashBoardContract {
 
-    interface View : BaseView <DashBoardActivity>{
+    interface View : BaseView {
         fun changeButtonState()
         fun showQuantityOfMoves()
         fun ringAlarm()
-        fun setPresenter(presenter : DashBoardPresenter?)
         fun openSettings()
         fun startOrPauseGame()
         fun stopOrResetGame()
         fun showMatchPlayed()
-        fun startOrPausePlayerTimer()
+        fun startOrPausePlayerTimer(chronometer : Chronometer, p : Player)
     }
 
-    interface Presenter : BasePresenter<DashBoardActivity>{
+    interface Presenter : BasePresenter<DashBoardActivity> {
         fun getListOfPlayed()
         fun getTotalGameTime()
         fun getMatchWinner()
         fun getQuantityOfMoves()
-        fun instantiateGame()
+        fun instantiateGameByDefault()
     }
 }
